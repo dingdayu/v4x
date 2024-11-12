@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v4x</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.7.0/github-markdown.css"
+        integrity="sha512-J3026fZbBSa9YlaavWKqMZFqEwSpCKtC1a+Ilhu1hzCzjqGKQXHT6XJc68/QbGyHbA3dTfxCdP+S4OM57yOc7Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>v4x</h1>
+    <p>A Xboard Helm chart for Kubernetes.</p>
+    <h2>Pre</h2>
+    <p>Creat a .env file (installed .env).</p>
+    <pre><code class="language-bash">kubectl create secret generic v4x --from-env-file=.env
+</code></pre>
+    <blockquote>
+        <p>Add <code>--namespace=my-namespace</code> option set namespace for kubernetes.</p>
+    </blockquote>
+    <h2>Use</h2>
+    <p>Add helm repo:</p>
+    <pre><code class="language-bash">helm repo add v4x https://dingdayu.github.io/v4x
+helm repo update
+</code></pre>
+    <p>Install Xboard to Kubernetes.</p>
+    <pre><code class="language-bash">helm install x4x v4x/xboard
+</code></pre>
+</body>
+
+</html>

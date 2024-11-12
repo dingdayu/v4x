@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  xboard:
+  - apiVersion: v2
+    appVersion: v0.1.9
+    created: "2024-11-12T23:05:44.413754+08:00"
+    description: A Xboard Helm chart for Kubernetes
+    digest: 40fd30e86e5b1252f8e3bb88466cde86aa24ef99d24a0216e80dfd5298affe24
+    name: xboard
+    type: application
+    urls:
+    - https://dingdayu.github.io/v4x/pkgs/xboard-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-12T23:05:44.412761+08:00"
