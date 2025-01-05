@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hysteria.fullname" . }}
+  labels:
+    {{- include "hysteria.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http-tcp
+      protocol: TCP
+      name: http-tcp
+    - port: {{ .Values.service.port }}
+      targetPort: http-udp
+      protocol: UDP
+      name: http-udp
+  selector:
+    {{- include "hysteria.selectorLabels" . | nindent 4 }}

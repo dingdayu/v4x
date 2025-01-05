@@ -1,0 +1,21 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "hysteria.fullname" . }}-tls
+spec:
+  secretName: {{ .Release.Name }}-tls-secret # 存储证书的 Secret
+  issuerRef:
+    name: {{ .Values.certificate.issuerName }} # 指定 cert-manager 的 Issuer 或 ClusterIssuer
+    kind: {{ .Values.certificate.issuerKind | default "Issuer" }}
+  # issuerRef:
+  #   group: cert-manager.io
+  #   kind: ClusterIssuer
+  #   name: letsencrypt-prod
+  commonName: {{ .Values.certificate.commonName }}
+  dnsNames:
+    {{- range .Values.certificate.dnsNames }}
+    - {{ . }}
+    {{- end }}
+  usages:
+    - server auth
+    - client auth

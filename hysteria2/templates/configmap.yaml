@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "hysteria.fullname" . }}-configmap
+data:
+  server.yaml: |
+    v2board:
+      apiHost: {{ .Values.apiHost | default "" }}
+      apiKey: {{ .Values.apiKey | default "" }}
+      nodeID: {{ .Values.nodeID | default 1 }}
+    tls:
+      cert: /etc/tls/tls.crt
+      key: /etc/tls/tls.key
+    auth:
+      type: v2board
+    trafficStats:
+      listen: 127.0.0.1:7653
+    acl:
+      inline:
+        - reject(10.0.0.0/8)
+        - reject(172.16.0.0/12)
+        - reject(192.168.0.0/16)
+        - reject(127.0.0.0/8)
+        - reject(fc00::/7)
