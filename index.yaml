@@ -1,14 +1,25 @@
 apiVersion: v1
 entries:
+  hysteria2:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-01-05T21:51:15.456875+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 12e7aa20ebd14e594c07729998d3713ad919d0c2366521a5bf940d11fe5181af
+    name: hysteria2
+    type: application
+    urls:
+    - https://dingdayu.github.io/v4x/pkgs/pkgs/hysteria2-0.1.0.tgz
+    version: 0.1.0
   xboard:
   - apiVersion: v2
     appVersion: v0.1.9
-    created: "2024-11-12T23:05:44.413754+08:00"
+    created: "2025-01-05T21:51:15.457332+08:00"
     description: A Xboard Helm chart for Kubernetes
     digest: 40fd30e86e5b1252f8e3bb88466cde86aa24ef99d24a0216e80dfd5298affe24
     name: xboard
     type: application
     urls:
-    - https://dingdayu.github.io/v4x/pkgs/xboard-0.1.0.tgz
+    - https://dingdayu.github.io/v4x/pkgs/pkgs/xboard-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-12T23:05:44.412761+08:00"
+generated: "2025-01-05T21:51:15.455816+08:00"
