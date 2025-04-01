@@ -9,7 +9,7 @@ entries:
     name: hysteria2
     type: application
     urls:
-    - https://dingdayu.github.io/v4x/pkgs/pkgs/hysteria2-0.1.0.tgz
+    - https://dingdayu.github.io/v4x/pkgs/hysteria2-0.1.0.tgz
     version: 0.1.0
   xboard:
   - apiVersion: v2
@@ -20,6 +20,6 @@ entries:
     name: xboard
     type: application
     urls:
-    - https://dingdayu.github.io/v4x/pkgs/pkgs/xboard-0.1.0.tgz
+    - https://dingdayu.github.io/v4x/pkgs/xboard-0.1.0.tgz
     version: 0.1.0
 generated: "2025-01-05T21:51:15.455816+08:00"
